@@ -1,0 +1,6 @@
+config/
+config
+README.md
+manifest.yml
+update_script.sh
+skaffold.yml
