@@ -1,0 +1,13 @@
+---
+applications:
+- name: cf-demo
+  memory: 64M
+  instances: 3
+#  buildpacks:
+#  - staticfile_buildpack
+  random-route: true
+#  path: website/
+docker:
+  image: smichard/demo_website:latest
+  env:
+   FORCE_HTTPS: true
