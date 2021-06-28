@@ -10,6 +10,11 @@ steps:
   - '-t'
   - 'eu.gcr.io/k8s-16244410/k8s-demo-app:latest'
   - '.'
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: Build-2
+  args:
+  - 'build'
   - '-t'
   - 'gcr.io/k8s-16244410/k8s-demo-app:$BUILD_ID'
   - '-t'
@@ -24,7 +29,11 @@ steps:
   args:
   - 'push'
   - 'eu.gcr.io/k8s-16244410/k8s-demo-app'
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: Push-2
+  args:
   - 'push'
   - 'gcr.io/k8s-16244410/k8s-demo-app'
-  
+
 # [END cloudbuild]
