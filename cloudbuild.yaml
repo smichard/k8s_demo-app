@@ -10,6 +10,11 @@ steps:
   - '-t'
   - 'eu.gcr.io/k8s-16244410/k8s-demo-app:latest'
   - '.'
+  - '-t'
+  - 'gcr.io/k8s-16244410/k8s-demo-app:$BUILD_ID'
+  - '-t'
+  - 'gcr.io/k8s-16244410/k8s-demo-app:latest'
+  - '.'
 
 # This step pushes the image to Container Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
@@ -19,5 +24,7 @@ steps:
   args:
   - 'push'
   - 'eu.gcr.io/k8s-16244410/k8s-demo-app'
+  - 'push'
+  - 'gcr.io/k8s-16244410/k8s-demo-app'
   
 # [END cloudbuild]
