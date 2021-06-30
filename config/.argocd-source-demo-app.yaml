@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - gcr.io/k8s-16244410/k8s-demo-app:68435792-a906-4f11-8272-724bec8c74ae
