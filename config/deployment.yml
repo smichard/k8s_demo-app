@@ -20,7 +20,7 @@ spec:
         app: demo-1
     spec:
       containers:
-      - image: eu.gcr.io/k8s-16244410/k8s-demo-app:latest
+      - image: gcr.io/k8s-16244410/k8s-demo-app
         name: demo-container
         ports:
         - containerPort: 80
