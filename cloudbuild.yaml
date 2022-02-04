@@ -20,4 +20,14 @@ steps:
   - 'push'
   - 'eu.gcr.io/tto-demo/k8s-demo-app'
 
+# deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  id: Deploy
+  args:
+  - run
+  - --filename=config/deployment.yml
+ # - --image=eu.gcr.io/tto-demo/k8s-demo-app:latest
+  - --location=europe-west3-a
+  - --cluster=tto-cluster
+
 # [END cloudbuild]

@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: demo-1
-  name: deployment-demo-1
+  name: dpl-demo
+  namespace: default
 spec:
   replicas: 3
   selector:
@@ -20,8 +21,25 @@ spec:
         app: demo-1
     spec:
       containers:
-      - image: gcr.io/k8s-16244410/k8s-demo-app
+      - image: eu.gcr.io/tto-demo/k8s-demo-app
         name: demo-container
         ports:
         - containerPort: 80
       dnsPolicy: ClusterFirst
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: srv-demo
+  namespace: default
+  labels:
+    app: demo-1
+    app.kubernetes.io/managed-by: gcp-cloud-build-deploy
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+  selector:
+    app: demo-1
+  type: LoadBalancer
+  loadBalancerIP: 34.89.155.147
