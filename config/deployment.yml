@@ -22,10 +22,10 @@ spec:
     spec:
       containers:
       - image: eu.gcr.io/tto-demo/k8s-demo-app:latest
+        imagePullPolicy: Always
         name: demo-container
         ports:
         - containerPort: 80
-      imagePullPolicy: Always
       dnsPolicy: ClusterFirst
 ---
 apiVersion: v1
