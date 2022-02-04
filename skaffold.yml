@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta14
 kind: Config
 build:
   artifacts:
-  - image: eu.gcr.io/k8s-16244410/k8s_demo-app
+  - image: eu.gcr.io/tto-demo/k8s_demo-app
     sync:
       infer:
       - 'website/*.html'
