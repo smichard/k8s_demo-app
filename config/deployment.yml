@@ -25,6 +25,7 @@ spec:
         name: demo-container
         ports:
         - containerPort: 80
+      imagePullPolicy: Always
       dnsPolicy: ClusterFirst
 ---
 apiVersion: v1
