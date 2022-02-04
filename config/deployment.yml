@@ -21,7 +21,7 @@ spec:
         app: demo-1
     spec:
       containers:
-      - image: eu.gcr.io/tto-demo/k8s-demo-app
+      - image: eu.gcr.io/tto-demo/k8s-demo-app:latest
         name: demo-container
         ports:
         - containerPort: 80
