@@ -6,7 +6,7 @@ metadata:
   name: dpl-demo
   namespace: default
 spec:
-  replicas: 100
+  replicas: 1
   selector:
     matchLabels:
       app: demo-1
