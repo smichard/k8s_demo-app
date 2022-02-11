@@ -9,10 +9,10 @@ build:
 deploy:
   kubectl:
     manifests:
-    - config/kustomization.yml
+    - config/deployment.yml
 portForward:
 - resourceType: deployment
-  resourceName: deployment-demo-1
+  resourceName: dpl-demo
   namespace: default
   port: 80
   localPort: 9000 # *Optional*
