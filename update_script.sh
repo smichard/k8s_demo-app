@@ -8,5 +8,5 @@ if [ -f ./website/index_2.html ]; then
 		echo changes performed
 fi
 git add -A
-git commit -m "Test"
+git commit -m "Test bla"
 echo file changes added to git repository 
